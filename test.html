@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的随笔网页</title>
+    <style>
+        /* CSS 样式 - 让网页变漂亮 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff7e5f;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #764ba2;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #764ba2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #667eea;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>欢迎来到我的世界</h1>
+        <p>探索技术、生活与创意的角落</p>
+    </header>
+
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">博客</a>
+        <a href="#">项目</a>
+        <a href="#">关于我</a>
+    </nav>
+
+    <div class="container">
+        <h2>最新动态</h2>
+        
+        <div class="card">
+            <h3>第一篇随笔</h3>
+            <p>这是我用 HTML 编写的一个简单网页。HTML 负责结构，CSS 负责美化，而 JavaScript 负责交互。</p>
+        </div>
+
+        <div class="card">
+            <h3>交互示例</h3>
+            <p>点击下方的按钮，看看会发生什么？</p>
+            <button onclick="showMessage()">点我一下</button>
+            <p id="display-text" style="margin-top: 10px; color: #764ba2; font-weight: bold;"></p>
+        </div>
+
+        <h2>关于这个页面</h2>
+        <p>这个页面使用了响应式设计，在手机和电脑上都能正常显示。你可以尝试修改代码中的颜色和文字，创建属于你自己的风格。</p>
+    </div>
+
+    <footer>
+        &copy; 2023 网页实验室 - 由 AI 辅助编写
+    </footer>
+
+    <script>
+        // JavaScript 交互逻辑
+        function showMessage() {
+            const messages = [
+                "你好！祝你今天开心！",
+                "代码改变世界！",
+                "你刚才点了一下按钮，对吧？",
+                "保持好奇心，继续学习！"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('display-text').innerText = messages[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
